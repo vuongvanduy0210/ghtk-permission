@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".ui.MainFragment">
+
+    <TextView
+        android:id="@+id/tvPermissionStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Location permission: " />
+
+    <TextView
+        android:id="@+id/tvLat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:text="Lat: "
+        app:layout_constraintEnd_toEndOf="@+id/tvPermissionStatus"
+        app:layout_constraintStart_toStartOf="@+id/tvPermissionStatus"
+        app:layout_constraintTop_toBottomOf="@+id/tvPermissionStatus" />
+
+    <TextView
+        android:id="@+id/tvLng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Lng: "
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/tvPermissionStatus"
+        app:layout_constraintStart_toStartOf="@+id/tvPermissionStatus"
+        app:layout_constraintTop_toBottomOf="@+id/tvLat" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Start"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="@+id/tvPermissionStatus"
+        app:layout_constraintStart_toStartOf="@+id/tvPermissionStatus"
+        app:layout_constraintTop_toBottomOf="@+id/tvLng" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
